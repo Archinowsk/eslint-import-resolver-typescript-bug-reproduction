@@ -1,5 +1,7 @@
 # eslint-import-resolver-typescript-bug-reproduction
 
+[![test](https://github.com/Archinowsk/eslint-import-resolver-typescript-bug-reproduction/actions/workflows/lint.yml/badge.svg)](https://github.com/Archinowsk/eslint-import-resolver-typescript-bug-reproduction/actions/workflows/lint.yml)
+
 After updating `eslint-import-resolver-typescript` version `3.9.0` to `4.3.4`, the following regression appears.
 
 NOTE: This bug appears only on Windows. This works fine on Mac and Linux.
