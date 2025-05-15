@@ -1,0 +1,17 @@
+# Dependency directories
+node_modules
+
+# Temp files
+.history
+
+# Mac
+.DS_Store
+
+# Yarn
+.yarn/*
+!.yarn/patches
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
+.pnp.*

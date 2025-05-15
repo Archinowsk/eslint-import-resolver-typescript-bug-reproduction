@@ -1,0 +1,16 @@
+{
+  "name": "eslint-import-resolver-typescript-bug-reproduction",
+  "type": "module",
+  "scripts": {
+    "eslint": "eslint ."
+  },
+  "dependencies": {
+    "@eslint/js": "9.26.0",
+    "eslint": "9.26.0",
+    "eslint-import-resolver-typescript": "4.3.4",
+    "eslint-plugin-import": "2.31.0",
+    "typescript": "5.8.3",
+    "typescript-eslint": "8.32.1"
+  },
+  "packageManager": "yarn@4.9.1"
+}
