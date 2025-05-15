@@ -1,0 +1,26 @@
+name: lint-ubuntu-22.04
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  lint:
+    runs-on: ubuntu-22.04
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Use Node.js 22.11.0
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22.11.0
+
+      - name: Yarn install
+        run: yarn --immutable
+
+      - name: Run ESLint
+        run: |
+          yarn eslint

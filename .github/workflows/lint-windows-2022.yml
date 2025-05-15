@@ -1,4 +1,4 @@
-name: test
+name: lint-windows-2022
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
 
 jobs:
   lint:
-    runs-on: windows-latest
+    runs-on: windows-2022
 
     steps:
       - name: Checkout code
