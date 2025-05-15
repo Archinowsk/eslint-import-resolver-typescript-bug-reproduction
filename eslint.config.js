@@ -1,13 +1,14 @@
 import eslint from "@eslint/js";
 import { defineConfig, globalIgnores } from "eslint/config";
 import typescriptEslint from "typescript-eslint";
-import eslintPluginImport from "eslint-plugin-import";
+import eslintPluginImportX from "eslint-plugin-import-x";
+import { createTypeScriptImportResolver } from "eslint-import-resolver-typescript";
 
 export default defineConfig([
   eslint.configs.recommended,
   typescriptEslint.configs.stylisticTypeChecked,
-  eslintPluginImport.flatConfigs.recommended,
-  eslintPluginImport.flatConfigs.typescript,
+  eslintPluginImportX.flatConfigs.recommended,
+  eslintPluginImportX.flatConfigs.typescript,
 
   globalIgnores([
     "**/.*", // Ignore dotfiles
@@ -26,13 +27,11 @@ export default defineConfig([
 
   {
     settings: {
-      "import/resolver": {
-        typescript: true,
-      },
+      "import-x/resolver-next": [createTypeScriptImportResolver()],
     },
 
     rules: {
-      "import/no-named-as-default-member": "off",
+      "import-x/no-named-as-default-member": "off",
     },
   },
 ]);
